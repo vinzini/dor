@@ -14,7 +14,7 @@ class PayslipItem extends Migration
     public function up()
     {
         Schema::create('payslip_item', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('payslip_id');
             $table->integer('company_id');
             $table->timestamps();

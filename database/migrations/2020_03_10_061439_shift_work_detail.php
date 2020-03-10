@@ -14,7 +14,7 @@ class ShiftWorkDetail extends Migration
     public function up()
     {
         Schema::create('shift_work_detail', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('shift_work_id');
             $table->integer('staff_id');
             $table->integer('company_id');

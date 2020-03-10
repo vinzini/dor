@@ -14,7 +14,7 @@ class ShiftWork extends Migration
     public function up()
     {
         Schema::create('shift_work', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('staff_id');
             $table->integer('main_group_id');
             $table->integer('management_group_id');

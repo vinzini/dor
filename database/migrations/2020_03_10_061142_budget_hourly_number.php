@@ -14,7 +14,7 @@ class BudgetHourlyNumber extends Migration
     public function up()
     {
         Schema::create('budget_hourly_number', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('management_group_id');
             $table->integer('company_id');
             $table->timestamps();

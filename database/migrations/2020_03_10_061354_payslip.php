@@ -14,7 +14,7 @@ class Payslip extends Migration
     public function up()
     {
         Schema::create('payslip', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('staff_id');
             $table->integer('employment_type_id');
             $table->integer('company_id');            
@@ -37,7 +37,7 @@ class Payslip extends Migration
             $table->smallInteger('retroactive_calculation');
             $table->integer('calculation_status');
             $table->smallInteger('edited');
-            $table->integer('previous_payslip_id',19,4);
+            $table->integer('previous_payslip_id');
             $table->decimal('retroactive_adjusted');
             $table->decimal('retroactive_health_insurance',19,4);
             $table->decimal('retroactive_welfare_pension',19,4);

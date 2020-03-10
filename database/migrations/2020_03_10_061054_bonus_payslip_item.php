@@ -14,7 +14,7 @@ class BonusPayslipItem extends Migration
     public function up()
     {
         Schema::create('bonus_payslip_item', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('bonus_payslip_id');
             $table->integer('company_id');
             $table->string('name');

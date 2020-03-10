@@ -14,7 +14,7 @@ class Staff extends Migration
     public function up()
     {
         Schema::create('staff', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('company_id');
             $table->timestamps();
             $table->integer('created_id');
