@@ -15,14 +15,14 @@ class BudgetItem extends Migration
     {
         Schema::create('budget_item', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('management_group_id');
+            $table->integer('management_group_id')->nullable();
             $table->integer('company_id');
             $table->timestamps();
-            $table->integer('created_id');
-            $table->integer('updated_id');
+            $table->integer('created_id')->nullable();
+            $table->integer('updated_id')->nullable();
             $table->string('budget_code');
             $table->string('name');
-            $table->string('identifier');
+            $table->string('identifier')->nullable();
             $table->integer('order_no');
             $table->smallInteger('is_active');
             $table->smallInteger('editable');

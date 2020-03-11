@@ -18,16 +18,16 @@ class StaffDetail extends Migration
             $table->integer('staff_id');
             $table->integer('company_id');
             $table->timestamps();
-            $table->integer('created_id');
-            $table->integer('updated_id');
-            $table->string('tel_country');
-            $table->string('tel_1');
-            $table->string('tel_2');
-            $table->string('fax');
-            $table->string('note');
-            $table->smallInteger('retirement_reason');
-            $table->smallInteger('retirement_type');
-            $table->string('retirement_remarks');
+            $table->integer('created_id')->nullable();
+            $table->integer('updated_id')->nullable();
+            $table->string('tel_country')->nullable();
+            $table->string('tel_1')->nullable();
+            $table->string('tel_2')->nullable();
+            $table->string('fax')->nullable();
+            $table->string('note')->nullable();
+            $table->smallInteger('retirement_reason')->nullable();
+            $table->smallInteger('retirement_type')->nullable();
+            $table->string('retirement_remarks')->nullable();
         });
     }
     /**

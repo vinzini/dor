@@ -21,14 +21,14 @@ class CompanyDetail extends Migration
             $table->integer('updated_id')->nullable();
             $table->integer('company_class');
             $table->integer('company_class_position')->nullable();
-            $table->string('region_cd');
-            $table->string('zip_code');
-            $table->string('address_1');
-            $table->string('address_2');
-            $table->string('address_3');
+            $table->string('region_cd')->nullable();
+            $table->string('zip_code')->nullable();
+            $table->string('address_1')->nullable();
+            $table->string('address_2')->nullable();
+            $table->string('address_3')->nullable();
             $table->string('address_4')->nullable();
             $table->string('tel_country')->nullable();
-            $table->string('tel_1');
+            $table->string('tel_1')->nullable();
             $table->string('tel_2')->nullable();
             $table->string('fax')->nullable();
             $table->string('mail')->nullable();
@@ -51,8 +51,8 @@ class CompanyDetail extends Migration
             $table->double('lon',20,4)->nullable();
             $table->string('note')->nullable();
             $table->string('contact_middle_name')->nullable();
-            $table->string('approved_user');
-            $table->timestamp('approval_date');
+            $table->string('approved_user')->nullable();
+            $table->timestamp('approval_date')->nullable();
         });
     }
 

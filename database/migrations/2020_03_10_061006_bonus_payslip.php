@@ -19,6 +19,7 @@ class BonusPayslip extends Migration
             $table->integer('company_id');
             $table->integer('number_of_bonus_times');
             $table->decimal('total_payment',19,4);
+            $table->decimal('taxable_payment',19,4);
             $table->decimal('total_deduction',19,4);
             $table->decimal('taxable_adjustment_amount',19,4)->nullable();
             $table->decimal('nontaxable_adjustment_amount',19,4)->nullable();

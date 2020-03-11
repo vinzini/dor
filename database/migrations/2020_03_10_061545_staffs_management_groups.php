@@ -19,8 +19,8 @@ class StaffsManagementGroups extends Migration
             $table->integer('management_group_id');
             $table->integer('company_id');
             $table->timestamps();
-            $table->integer('created_id');
-            $table->integer('updated_id');
+            $table->integer('created_id')->nullable();
+            $table->integer('updated_id')->nullable();
             $table->date('start_date');
             $table->date('end_date');
             $table->smallInteger('main_group');

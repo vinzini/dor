@@ -22,10 +22,10 @@ class BonusPayslipItem extends Migration
             $table->integer('taxable');
             $table->decimal('amount',19,4);
             $table->string('label');
-            $table->integer('company_bonus_item_id');
+            $table->integer('company_bonus_item_id')->nullable();
             $table->timestamps();
-            $table->integer('created_id');
-            $table->integer('updated_id');
+            $table->integer('created_id')->nullable();
+            $table->integer('updated_id')->nullable();
 
         });
     }
